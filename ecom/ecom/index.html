@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>MY SHOP</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+             <a href="cart.html">Cart: <span id="cart-total">0</span> items</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-grid">
+            <!-- Product 1 to 10 -->
+            <div class="product-card" id="product1">
+                <img src="https://c.media-amazon.com/images/I/81SigpJN1KL._AC_UY327_FMwebp_QL65_.jpg">
+                <h3>Apple iPhone 14 Pro</h3>
+                <p class="price">$999.99</p>
+                <p class="description">The latest smartphone from Apple with advanced features and stunning design.</p>
+                <button onclick="addToCart('Apple iPhone 14 Pro', 999.99, 'iphone.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Apple iPhone 14 Pro', 999.99, 'iphone.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product2">
+                <img src="https://c.media-amazon.com/images/I/61-E0V81kBL._AC_UY327_FMwebp_QL65_.jpg" alt="Samsung Galaxy S23">
+                <h3>Samsung Galaxy S23</h3>
+                <p class="price">$899.99</p>
+                <p class="description">Experience the future of smartphones with Samsung's latest Galaxy S23.</p>
+                <button onclick="addToCart('Samsung Galaxy S23', 899.99, 'galaxy.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Samsung Galaxy S23', 899.99, 'galaxy.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product3">
+                <img src="https://c.media-amazon.com/images/I/61hC9WZOycL._AC_UY327_FMwebp_QL65_.jpg" alt="Google Pixel 8">
+                <h3>Google Pixel 8</h3>
+                <p class="price">$799.99</p>
+                <p class="description">Google's latest Pixel phone, known for its exceptional camera and pure Android experience.</p>
+                <button onclick="addToCart('Google Pixel 8', 799.99, 'pixel.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Google Pixel 8', 799.99, 'pixel.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product4">
+                <img src="https://c.media-amazon.com/images/I/51afJC92cgL._AC_UY327_FMwebp_QL65_.jpg" alt="Sony PlayStation 5">
+                <h3>Sony PlayStation 5</h3>
+                <p class="price">$499.99</p>
+                <p class="description">The ultimate gaming console with next-gen performance and stunning visuals.</p>
+                <button onclick="addToCart('Sony PlayStation 5', 499.99, 'playstation.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Sony PlayStation 5', 499.99, 'playstation.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product5">
+                <img src="https://c.media-amazon.com/images/I/61-jjE67uqL._AC_UY327_FMwebp_QL65_.jpg" alt="Microsoft Xbox Series X">
+                <h3>Microsoft Xbox Series X</h3>
+                <p class="price">$499.99</p>
+                <p class="description">Experience true 4K gaming with the most powerful Xbox ever made.</p>
+                <button onclick="addToCart('Microsoft Xbox Series X', 499.99, 'xbox.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Microsoft Xbox Series X', 499.99, 'xbox.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product6">
+                <img src="https://c.media-amazon.com/images/I/71jG+e7roXL._AC_UY327_FMwebp_QL65_.jpg" alt="Apple MacBook Pro">
+                <h3>Apple MacBook Pro</h3>
+                <p class="price">$1,299.99</p>
+                <p class="description">A powerful laptop with stunning Retina display and the latest Apple M1 chip.</p>
+                <button onclick="addToCart('Apple MacBook Pro', 1299.99, 'macbook.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Apple MacBook Pro', 1299.99, 'macbook.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product7">
+                <img src="https://c.media-amazon.com/images/I/51VrJYXnGzL._AC_UY327_FMwebp_QL65_.jpg" alt="Apple AirPods Pro">
+                <h3>Apple AirPods Pro</h3>
+                <p class="price">$249.99</p>
+                <p class="description">High-quality wireless earbuds with active noise cancellation and great sound.</p>
+                <button onclick="addToCart('Apple AirPods Pro', 249.99, 'airpods.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Apple AirPods Pro', 249.99, 'airpods.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product8">
+                <img src="https://c.media-amazon.com/images/I/71aTghUQfqL._AC_UY327_FMwebp_QL65_.jpg" alt="Samsung Galaxy Watch 5">
+                <h3>Samsung Galaxy Watch 5</h3>
+                <p class="price">$349.99</p>
+                <p class="description">The latest smartwatch with advanced health features and customizable watch faces.</p>
+                <button onclick="addToCart('Samsung Galaxy Watch 5', 349.99, 'smartwatch.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Samsung Galaxy Watch 5', 349.99, 'smartwatch.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product9">
+                <img src="https://c.media-amazon.com/images/I/81j2pguosOL._AC_UY327_FMwebp_QL65_.jpg" alt="Sony WH-1000XM4">
+                <h3>Sony WH-1000XM4</h3>
+                <p class="price">$349.99</p>
+                <p class="description">Industry-leading noise-canceling headphones with exceptional sound quality.</p>
+                <button onclick="addToCart('Sony WH-1000XM4', 349.99, 'headphones.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Sony WH-1000XM4', 349.99, 'headphones.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product10">
+                <img src="https://c.media-amazon.com/images/I/81SR5ayPXVL._AC_UY327_FMwebp_QL65_.jpg" alt="Amazon Kindle Paperwhite">
+                <h3>Amazon Kindle Paperwhite</h3>
+                <p class="price">$129.99</p>
+                <p class="description">The ultimate e-reader with a high-resolution display and built-in light.</p>
+                <button onclick="addToCart('Amazon Kindle Paperwhite', 129.99, 'kindle.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Amazon Kindle Paperwhite', 129.99, 'kindle.jpg')">Buy Now</button>
+            </div>
+            <!-- Product 11 to 20 -->
+            <div class="product-card" id="product11">
+                <img src="https://c.media-amazon.com/images/I/61rGiiTc0TL._AC_UY327_FMwebp_QL65_.jpg" alt="Canon EOS R5">
+                <h3>Canon EOS R5</h3>
+                <p class="price">$3,899.99</p>
+                <p class="description">Professional mirrorless camera with high resolution and advanced features.</p>
+                <button onclick="addToCart('Canon EOS R5', 3899.99, 'camera.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Canon EOS R5', 3899.99, 'camera.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product12">
+                <img src="https://c.media-amazon.com/images/I/71-27pFPDJL._AC_UL480_FMwebp_QL65_.jpg" alt="DJI Mavic Air 2">
+                <h3>DJI Mavic Air 2</h3>
+                <p class="price">$799.99</p>
+                <p class="description">Compact drone with advanced camera capabilities and intelligent flight modes.</p>
+                <button onclick="addToCart('DJI Mavic Air 2', 799.99, 'drones.jpg')">Add to Cart</button>
+                <button onclick="buyNow('DJI Mavic Air 2', 799.99, 'drones.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product13">
+                <img src="https://c.media-amazon.com/images/I/71F8GQJbXEL._AC_UY327_FMwebp_QL65_.jpg" alt="Apple iPad Pro">
+                <h3>Apple iPad Pro</h3>
+                <p class="price">$1,099.99</p>
+                <p class="description">Powerful tablet with a stunning display and the latest Apple M1 chip.</p>
+                <button onclick="addToCart('Apple iPad Pro', 1099.99, 'tablet.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Apple iPad Pro', 1099.99, 'tablet.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product14">
+                <img src="https://c.media-amazon.com/images/I/518BYF8LHRL._AC_UY327_FMwebp_QL65_.jpg" alt="Dell XPS 13">
+                <h3>Dell XPS 13</h3>
+                <p class="price">$1,299.99</p>
+                <p class="description">Sleek and powerful ultrabook with a stunning InfinityEdge display.</p>
+                <button onclick="addToCart('Dell XPS 13', 1299.99, 'laptop.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Dell XPS 13', 1299.99, 'laptop.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product15">
+                <img src="https://c.media-amazon.com/images/I/61T5drqfafL._AC_UY327_FMwebp_QL65_.jpg" alt="LG OLED TV">
+                <h3>LG OLED TV</h3>
+                <p class="price">$2,299.99</p>
+                <p class="description">Enjoy vibrant colors and deep blacks with this premium OLED TV.</p>
+                <button onclick="addToCart('LG OLED TV', 2299.99, 'tv.jpg')">Add to Cart</button>
+                <button onclick="buyNow('LG OLED TV', 2299.99, 'tv.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product16">
+                <img src="https://c.media-amazon.com/images/I/51YvZUHdmbL._AC_UY327_FMwebp_QL65_.jpgg" alt="Bose SoundLink">
+                <h3>Bose SoundLink</h3>
+                <p class="price">$199.99</p>
+                <p class="description">Portable Bluetooth speaker with rich sound and long battery life.</p>
+                <button onclick="addToCart('Bose SoundLink', 199.99, 'speakers.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Bose SoundLink', 199.99, 'speakers.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product17">
+                <img src="https://c.media-amazon.com/images/I/7138-thYO9L._AC_UL480_FMwebp_QL65_.jpg" alt="Logitech Mechanical Keyboard">
+                <h3>Logitech Mechanical Keyboard</h3>
+                <p class="price">$129.99</p>
+                <p class="description">High-performance mechanical keyboard with customizable RGB lighting.</p>
+                <button onclick="addToCart('Logitech Mechanical Keyboard', 129.99, 'keyboard.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Logitech Mechanical Keyboard', 129.99, 'keyboard.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product18">
+                <img src="https://c.media-amazon.com/images/I/51XcbUvfXiL._AC_UY327_FMwebp_QL65_.jpg" alt="Razer DeathAdder">
+                <h3>Razer DeathAdder</h3>
+                <p class="price">$69.99</p>
+                <p class="description">Gaming mouse with high precision and customizable buttons.</p>
+                <button onclick="addToCart('Razer DeathAdder', 69.99, 'mouse.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Razer DeathAdder', 69.99, 'mouse.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product19">
+                <img src="https://c.media-amazon.com/images/I/81sQWfxGDRL._AC_UY327_FMwebp_QL65_.jpg" alt="Samsung Smart TV">
+                <h3>Samsung Smart TV</h3>
+                <p class="price">$1,299.99</p>
+                <p class="description">4K Smart TV with built-in streaming apps and vibrant display.</p>
+                <button onclick="addToCart('Samsung Smart TV', 1299.99, 'smarttv.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Samsung Smart TV', 1299.99, 'smarttv.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product20">
+                <img src="https://c.media-amazon.com/images/I/818Xb-mBNpL._AC_UY327_FMwebp_QL65_.jpg" alt="Sony Soundbar">
+                <h3>Sony Soundbar</h3>
+                <p class="price">$299.99</p>
+                <p class="description">Enhance your home theater experience with this high-quality soundbar.</p>
+                <button onclick="addToCart('Sony Soundbar', 299.99, 'soundbar.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Sony Soundbar', 299.99, 'soundbar.jpg')">Buy Now</button>
+            </div>
+            <!-- Product 21 to 30 -->
+            <div class="product-card" id="product21">
+                <img src="https://c.media-amazon.com/images/I/51r05bNtxyL._AC_UY327_FMwebp_QL65_.jpg" alt="Vitamix Blender">
+                <h3>Vitamix Blender</h3>
+                <p class="price">$399.99</p>
+                <p class="description">High-performance blender for all your culinary needs.</p>
+                <button onclick="addToCart('Vitamix Blender', 399.99, 'blender.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Vitamix Blender', 399.99, 'blender.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product22">
+                <img src="https://c.media-amazon.com/images/I/61Vz6NRgjSL._AC_UY327_FMwebp_QL65_.jpg" alt="Breville Toaster">
+                <h3>Breville Toaster</h3>
+                <p class="price">$129.99</p>
+                <p class="description">Stylish and functional toaster with multiple settings.</p>
+                <button onclick="addToCart('Breville Toaster', 129.99, 'toaster.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Breville Toaster', 129.99, 'toaster.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product23">
+                <img src="https://c.media-amazon.com/images/I/51EBAzgH9uL._AC_UY327_FMwebp_QL65_.jpg" alt="Nespresso Coffee Machine">
+                <h3>Nespresso Coffee Machine</h3>
+                <p class="price">$229.99</p>
+                <p class="description">Enjoy barista-quality coffee with this sleek coffee machine.</p>
+                <button onclick="addToCart('Nespresso Coffee Machine', 229.99, 'coffee.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Nespresso Coffee Machine', 229.99, 'coffee.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product24">
+                <img src="https://c.media-amazon.com/images/I/719DS+WaOWL._AC_UY327_FMwebp_QL65_.jpg" alt="Panasonic Microwave">
+                <h3>Panasonic Microwave</h3>
+                <p class="price">$149.99</p>
+                <p class="description">Efficient microwave with smart cooking features.</p>
+                <button onclick="addToCart('Panasonic Microwave', 149.99, 'microwave.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Panasonic Microwave', 149.99, 'microwave.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product25">
+                <img src="https://c.media-amazon.com/images/I/21hvQHWbBzL._AC_UY327_FMwebp_QL65_.jpg" alt="Dyson Vacuum Cleaner">
+                <h3>Dyson Vacuum Cleaner</h3>
+                <p class="price">$499.99</p>
+                <p class="description">Powerful vacuum cleaner with advanced suction technology.</p>
+                <button onclick="addToCart('Dyson Vacuum Cleaner', 499.99, 'vacuum.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Dyson Vacuum Cleaner', 499.99, 'vacuum.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product26">
+                <img src="https://c.media-amazon.com/images/I/41I-G-wOwUL._AC_UY327_FMwebp_QL65_.jpg" alt="Philips Air Fryer">
+                <h3>Philips Air Fryer</h3>
+                <p class="price">$249.99</p>
+                <p class="description">Cook your favorite meals with less oil using this air fryer.</p>
+                <button onclick="addToCart('Philips Air Fryer', 249.99, 'airfryer.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Philips Air Fryer', 249.99, 'airfryer.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product27">
+                <img src="https://c.media-amazon.com/images/I/61MOH+HPTQL._AC_UY327_FMwebp_QL65_.jpg" alt="Levoit Humidifier">
+                <h3>Levoit Humidifier</h3>
+                <p class="price">$129.99</p>
+                <p class="description">Improve air quality and comfort with this compact humidifier.</p>
+                <button onclick="addToCart('Levoit Humidifier', 129.99, 'humidifier.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Levoit Humidifier', 129.99, 'humidifier.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product28">
+                <img src="https://c.media-amazon.com/images/I/51PqLfwdMdL._AC_UL480_FMwebp_QL65_.jpg" alt="KitchenAid Mixer">
+                <h3>KitchenAid Mixer</h3>
+                <p class="price">$349.99</p>
+                <p class="description">A versatile mixer for all your baking needs.</p>
+                <button onclick="addToCart('KitchenAid Mixer', 349.99, 'baking.jpg')">Add to Cart</button>
+                <button onclick="buyNow('KitchenAid Mixer', 349.99, 'baking.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product29">
+                <img src="https://c.media-amazon.com/images/I/71GJzJBJIHL._AC_UL480_FMwebp_QL65_.jpg" alt="North Face Jacket">
+                <h3>North Face Jacket</h3>
+                <p class="price">$199.99</p>
+                <p class="description">Stay warm and stylish with this high-quality jacket.</p>
+                <button onclick="addToCart('North Face Jacket', 199.99, 'jacket.jpg')">Add to Cart</button>
+                <button onclick="buyNow('North Face Jacket', 199.99, 'jacket.jpg')">Buy Now</button>
+            </div>
+            <div class="product-card" id="product30">
+                <img src="https://c.media-amazon.com/images/I/61WJS1gxgTL._AC_UL480_FMwebp_QL65_.jpg" alt="Herschel Backpack">
+                <h3>Herschel Backpack</h3>
+                <p class="price">$89.99</p>
+                <p class="description">Stylish and durable backpack for everyday use.</p>
+                <button onclick="addToCart('Herschel Backpack', 89.99, 'backpack.jpg')">Add to Cart</button>
+                <button onclick="buyNow('Herschel Backpack', 89.99, 'backpack.jpg')">Buy Now</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
